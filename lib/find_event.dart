@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'animation/fade_animation.dart';
@@ -11,6 +10,7 @@ class FindEvent extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Colors.white,
         // elevation: 0,
+
         leading: Icon(Icons.menu, color: Colors.black,),
         actions: <Widget>[
           Padding(
@@ -53,27 +53,25 @@ class FindEvent extends StatelessWidget {
                     borderRadius: BorderRadius.circular(50),
                     color: Colors.white
                 ),
-                child: TextField(
+                child: const TextField(
                   decoration: InputDecoration(
-                    // border: OutlineInputBorder(
-                    //   borderSide: BorderSide(color: Colors.black)
-                    // ),
+
                       border: InputBorder.none,
                       prefixIcon: Icon(Icons.search, color: Colors.black,),
-                      hintText: "Chercher un paiya",
+                      hintText: "Search Event",
                       hintStyle: TextStyle(color: Colors.black)
                   ),
                 ),
               )),
-              SizedBox(height: 30,),
-              FadeAnimation(1.2, makeItem(image: 'assets/images/one.jpg', date: 4, titre: "La sunday")),
-              SizedBox(height: 20,),
-              FadeAnimation(1.3, makeItem(image: 'assets/images/two.jpg', date: 5, titre: "Beach party")),
-              SizedBox(height: 20,),
-              FadeAnimation(1.4, makeItem(image: 'assets/images/three.jpg', date: 6, titre: "Concert Tm paiya")),
-              SizedBox(height: 20,),
-              FadeAnimation(1.5, makeItem(image: 'assets/images/four.jpg', date: 7, titre:  "Independance")),
-              SizedBox(height: 20,),
+              const SizedBox(height: 30,),
+              FadeAnimation(1.2, makeItem(image: 'assets/images/one.jpg', date: 17)),
+              const SizedBox(height: 20,),
+              FadeAnimation(1.3, makeItem(image: 'assets/images/two.jpg', date: 18)),
+              const SizedBox(height: 20,),
+              FadeAnimation(1.4, makeItem(image: 'assets/images/three.jpg', date: 19)),
+              const SizedBox(height: 20,),
+              FadeAnimation(1.5, makeItem(image: 'assets/images/four.jpg', date: 20)),
+              const SizedBox(height: 20,),
             ],
           ),
         ),
@@ -81,7 +79,7 @@ class FindEvent extends StatelessWidget {
     );
   }
 
-  Widget makeItem({image, date, titre}) {
+  Widget makeItem({image, date}) {
     return Row(
       children: <Widget>[
         Container(
@@ -91,7 +89,7 @@ class FindEvent extends StatelessWidget {
           child: Column(
             children: <Widget>[
               Text(date.toString(), style: TextStyle(color: Colors.blue, fontSize: 25, fontWeight: FontWeight.bold),),
-              Text("Août", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
+              Text("SEP", style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),)
             ],
           ),
         ),
@@ -116,17 +114,17 @@ class FindEvent extends StatelessWidget {
                       ]
                   )
               ),
-              child: Column(
+              child: const Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: <Widget>[
-                  Text(titre, style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),),
+                  Text("Bumbershoot 2019", style: TextStyle(color: Colors.white, fontSize: 30, fontWeight: FontWeight.bold),),
                   SizedBox(height: 10,),
                   Row(
                     children: <Widget>[
                       Icon(Icons.access_time, color: Colors.white,),
                       SizedBox(width: 10,),
-                      Text("19:00 ", style: TextStyle(color: Colors.white),)
+                      Text("19:00 PM", style: TextStyle(color: Colors.white),)
                     ],
                   )
                 ],
